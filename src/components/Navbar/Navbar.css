@@ -1,0 +1,31 @@
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.navbar-logo {
+  color: var(--color-one);
+  justify-self: start;
+  margin-left: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: var(--primary-text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}

@@ -44,6 +44,31 @@
   height: 80%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.home-page-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-page-options-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  color: black;
+  text-decoration: none;
+}
+
+.home-page-options-item:hover {
+  transform: scale(1.05);
 }

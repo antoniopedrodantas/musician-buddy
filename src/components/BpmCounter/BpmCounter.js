@@ -45,7 +45,7 @@ export function BpmCounter() {
   };
 
   return (
-    <div>
+    <div className="bpm-container">
       <div>
         <button onClick={handleBpmClick}>Tap here</button>
       </div>

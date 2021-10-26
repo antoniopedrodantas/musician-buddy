@@ -6,7 +6,10 @@
 
 html,
 body {
-  background-color: #ffac4a;
+  background-color: var(--primary-color);
   --primary-color: #ffac4a;
+  --secondary-color: #e8e1d9;
   --primary-text: rgb(0, 0, 0);
+
+  scroll-behavior: smooth;
 }

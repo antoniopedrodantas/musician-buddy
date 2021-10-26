@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { GiMusicalScore } from "react-icons/gi";
 
 // Styling
@@ -9,21 +8,21 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <h1>
-        <Link className="navbar-logo" to="/">
+        <a className="navbar-logo" href="#home-page-container">
           <GiMusicalScore size={40} />
-        </Link>
+        </a>
       </h1>
       <ul className="nav-menu">
         <li>
-          <Link className="nav-links" to="/bpm-counter">
+          <a className="nav-links" href="#bpm-page-container">
             Bpm
-          </Link>
-          <Link className="nav-links" to="/tuner">
+          </a>
+          <a className="nav-links" href="#tuner-page-container">
             Tuner
-          </Link>
-          <Link className="nav-links" to="/about">
+          </a>
+          <a className="nav-links" href="#about-page-container">
             About
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

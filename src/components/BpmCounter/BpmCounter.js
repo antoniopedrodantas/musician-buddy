@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import moment from "moment";
+import { GrPowerReset } from "react-icons/gr";
+import { FaRegHandPointUp } from "react-icons/fa";
+
+// Styling
+import "./BpmCounter.css";
 
 export function BpmCounter() {
   // bpm variable
@@ -37,6 +42,8 @@ export function BpmCounter() {
     }
   };
 
+  // handles reset button
+  // takes bpm result to undefined
   const handleResetBpm = () => {
     setBpmCounter(0);
     setStartTime(0);
@@ -44,16 +51,72 @@ export function BpmCounter() {
     setFinalBpm(0);
   };
 
+  // handles rendering
+  // if finalbpm is greater than 0 returns bpm
+  // otherwise just does a little countdown
+  const renderBpmResult = () => {
+    if (finalBpm > 0) {
+      return (
+        <>
+          <div className="bpm-container-result">
+            <p className="bpm-result">{Math.round(finalBpm)}</p>
+            <p>BPM</p>
+          </div>
+        </>
+      );
+    } 
+    else if (BpmCounter === 1 && finalBpm <= 0) {
+      return (
+        <>
+          <div className="bpm-container-result">
+            <p className="bpm-result">3</p>
+          </div>
+        </>
+      );
+    }
+    else if (BpmCounter === 2 && finalBpm <= 0) {
+      return (
+        <>
+          <div className="bpm-container-result">
+            <p className="bpm-result">2</p>
+          </div>
+        </>
+      );
+    }
+    else if (BpmCounter === 3 && finalBpm <= 0) {
+      return (
+        <>
+          <div className="bpm-container-result">
+            <p className="bpm-result">1</p>
+          </div>
+        </>
+      );
+    }
+    else {
+      return (
+        <>
+          <div className="bpm-container-result">
+            <p className="bpm-result-hidden">Start tappin'!</p>
+          </div>
+        </>
+      );
+    }
+  };
+
   return (
     <div className="bpm-container">
-      <div>
-        <button onClick={handleBpmClick}>Tap here</button>
-      </div>
-      <div>
-        <button onClick={handleResetBpm}>Reset</button>
-      </div>
-      <div>
-        <p>{Math.round(finalBpm)}</p>
+      {renderBpmResult()}
+      <div className="bpm-container-options">
+        <div className="bpm-container-options-item" onClick={handleBpmClick}>
+          <div>
+            <FaRegHandPointUp size={32} />
+          </div>
+        </div>
+        <div className="bpm-container-options-item" onClick={handleResetBpm}>
+          <div>
+            <GrPowerReset size={32} />
+          </div>
+        </div>
       </div>
     </div>
   );

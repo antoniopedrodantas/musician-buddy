@@ -1,0 +1,40 @@
+.tuner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tuner-container-sound {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  color: black;
+  text-decoration: none;
+}
+
+.tuner-container-sound:hover {
+  transform: scale(1.05);
+}
+
+.tuner-container-options {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}

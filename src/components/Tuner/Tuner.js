@@ -1,5 +1,9 @@
 import React from "react";
 import aKey from "./a-key.wav";
+import { IoMdMusicalNote } from "react-icons/io";
+
+// Styling
+import "./Tuner.css";
 
 export function Tuner() {
 
@@ -9,8 +13,13 @@ export function Tuner() {
   };
 
   return (
-    <div>
-      <button onClick={handlePlay}>Play</button>
+    <div className="tuner-container">
+      <div className="tuner-container-sound" onClick={handlePlay}>
+        <IoMdMusicalNote size={120} />
+      </div>
+      <div className="tuner-container-options">
+        <p>A</p>
+      </div>
     </div>
   );
 }

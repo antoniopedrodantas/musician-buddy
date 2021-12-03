@@ -1,6 +1,4 @@
 import React from "react";
-import { GiMetronome } from "react-icons/gi";
-import { IoMdMusicalNote } from "react-icons/io";
 
 // Styling
 import "./LandingPage.css";
@@ -15,22 +13,9 @@ export function LandingPage() {
     <div>
       <div id="home-page-container">
         <div className="home-page">
-          <h1>Welcome to MusicianBuddy</h1>
-          <div>If you are a musician, this is the place for you</div>
-          <div className="home-page-options">
-            <a className="home-page-options-item" href="#bpm-page-container">
-              <div>
-                <GiMetronome size={120} />
-              </div>
-              <div>BPM Counter</div>
-            </a>
-            <a className="home-page-options-item" href="#tuner-page-container">
-              <div>
-                <IoMdMusicalNote size={120} />
-              </div>
-              <div>Tuner</div>
-            </a>
-          </div>
+          <h1 className="text-center-aligned">Welcome to MusicianBuddy</h1>
+          <h4 className="text-center-aligned">If you are a musician, this is the place for you</h4>
+          <div className="text-center-aligned">Try out the BPM Counter and our Tuner!</div>
         </div>
       </div>
       <div id="bpm-page-container">

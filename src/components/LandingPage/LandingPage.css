@@ -72,3 +72,7 @@
 .home-page-options-item:hover {
   transform: scale(1.05);
 }
+
+.text-center-aligned {
+  text-align: center;
+}

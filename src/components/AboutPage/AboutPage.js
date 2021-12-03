@@ -13,11 +13,11 @@ export function AboutPage() {
         className="about-page-picture"
       />
       <div className="about-page-text">
-        <p>
+        <p className="text-center-aligned">
           This web application was developed by António Pedro Dantas, Computer
           Science student @ FEUP
         </p>
-        <p>It is a non profit platform to ease musicians' lives</p>
+        <p className="text-center-aligned">It is a non profit platform to ease musicians' lives</p>
       </div>
       <div className="about-page-links">
         <a
